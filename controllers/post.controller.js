@@ -92,7 +92,7 @@ function update(req, res) {
     categoryId: { type: "number", optional: false },
   };
 
-  const v = new validator();
+  const v = new Validator();
   const validationResponse = v.validate(updatedPost, schema);
 
   if (validationResponse !== true) {
