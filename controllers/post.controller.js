@@ -1,4 +1,4 @@
-const validator = require("fastest-validator");
+const Validator = require("fastest-validator");
 const models = require("../models");
 
 function save(req, res) {
@@ -16,7 +16,7 @@ function save(req, res) {
     categoryId: { type: "number", optional: false },
   };
 
-  const v = new validator();
+  const v = new Validator();
   const validationResponse = v.validate(post, schema);
 
   if (validationResponse !== true) {
